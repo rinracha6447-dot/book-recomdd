@@ -1,0 +1,957 @@
+
+/* ===== GENERAL ===== */
+:root {
+  --midnight: #10162b;
+  --deep-blue: #171e38;
+  --purple: #272b4b;
+  --gold: #e5c88f;
+  --cream: #f3ecdf;
+  --muted: #c3c5d5;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  margin: 0;
+  background-color: var(--midnight);
+  color: var(--cream);
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  line-height: 1.9;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  line-height: 1.4;
+}
+
+p {
+  color: var(--muted);
+}
+
+.section-space {
+  padding: 110px 0;
+}
+
+.section-label {
+  color: var(--gold);
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.section-title {
+  font-family: "Playfair Display", serif;
+  color: var(--cream);
+  font-size: clamp(2rem, 5vw, 3.7rem);
+  font-weight: 600;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: rgba(12, 17, 35, 0.96);
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(229, 200, 143, 0.2);
+}
+
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  color: var(--gold) !important;
+  letter-spacing: 2px;
+}
+
+.navbar .nav-link {
+  color: var(--cream);
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  margin-left: 18px;
+}
+
+.navbar .nav-link:hover {
+  color: var(--gold);
+}
+
+/* ===== HERO ===== */
+.hero-section {
+  min-height: 100vh;
+  padding: 130px 0 80px;
+  background:
+    linear-gradient(
+      rgba(10, 14, 35, 0.48),
+      rgba(10, 14, 35, 0.92)
+    ),
+    url("images/hero.jpg") center / cover no-repeat;
+}
+
+.hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(3.2rem, 9vw, 7.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--cream);
+  letter-spacing: 3px;
+}
+
+.hero-subtitle {
+  color: var(--gold);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  margin-top: 25px;
+}
+
+.hero-description {
+  max-width: 600px;
+  font-size: 1.1rem;
+}
+
+.btn-gold {
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  color: var(--midnight);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.btn-gold:hover {
+  background: transparent;
+  color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* ===== ABOUT ===== */
+.book-cover {
+  max-height: 560px;
+  object-fit: contain;
+  border: 1px solid rgba(229, 200, 143, 0.3);
+}
+
+.info-box {
+  background: var(--deep-blue);
+  border: 1px solid rgba(229, 200, 143, 0.15);
+  border-radius: 12px;
+  padding: 18px;
+  height: 100%;
+}
+
+.info-box small {
+  color: var(--gold);
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+}
+
+.info-box h5 {
+  color: var(--cream);
+  margin-top: 7px;
+  font-size: 1rem;
+}
+
+/* ===== STORY ===== */
+.story-section {
+  background: var(--deep-blue);
+}
+
+.story-section img {
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+/* ===== CAROUSEL ===== */
+.carousel-image {
+  height: 520px;
+  object-fit: cover;
+  filter: brightness(0.55);
+}
+
+.carousel-caption {
+  bottom: 12%;
+}
+
+.carousel-caption h3 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.5rem, 4vw, 2.8rem);
+  color: var(--gold);
+}
+
+.carousel-caption p {
+  color: white;
+  font-size: 1rem;
+}
+
+/* ===== REVIEW ===== */
+.review-section {
+  background: var(--deep-blue);
+}
+
+.review-card {
+  background: var(--purple);
+  padding: 35px;
+  border: 1px solid rgba(229, 200, 143, 0.2);
+  border-radius: 15px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
+}
+
+.card-number {
+  color: var(--gold);
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.review-card h3 {
+  color: var(--gold);
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+}
+
+.review-card h4 {
+  color: var(--cream);
+  font-size: 1.3rem;
+  margin: 15px 0;
+}
+
+.reader-note {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 45px 20px;
+}
+
+.reader-note h3 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--gold);
+  line-height: 1.8;
+}
+
+/* ===== ACCORDION ===== */
+.accordion-item {
+  background: var(--deep-blue);
+  color: var(--cream);
+  border: 1px solid rgba(229, 200, 143, 0.2);
+}
+
+.accordion-button {
+  background: var(--deep-blue);
+  color: var(--cream);
+  font-family: "Kanit", sans-serif;
+  padding: 22px;
+}
+
+.accordion-button:not(.collapsed) {
+  background: var(--purple);
+  color: var(--gold);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
+.accordion-button::after {
+  filter: invert(1);
+}
+
+.accordion-body {
+  color: var(--muted);
+  padding: 25px;
+}
+
+/* ===== FOOTER ===== */
+.footer-section {
+  background: #0a0f20;
+  border-top: 1px solid rgba(229, 200, 143, 0.2);
+}
+
+.footer-title {
+  font-family: "Playfair Display", serif;
+  color: var(--gold);
+  font-size: clamp(1.7rem, 4vw, 3rem);
+}
+
+.footer-section hr {
+  border-color: var(--gold);
+  opacity: 0.3;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 767.98px) {
+  .section-space {
+    padding: 70px 0;
+  }
+
+  .hero-section {
+    min-height: 85vh;
+  }
+
+  .hero-title {
+    letter-spacing: 1px;
+  }
+
+  .carousel-image {
+    height: 380px;
+  }
+
+  .carousel-caption {
+    bottom: 10%;
+  }
+
+  .review-card {
+    padding: 25px;
+  }
+
+  .navbar .nav-link {
+    margin-left: 0;
+  }
+}
+
+/* Reduce animation for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .review-card {
+    transition: none;
+  }
+}
+.book-cover {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+/* เปลี่ยนฟอนต์หัวข้อใหญ่ */
+h1, h2, h3 {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 500;
+}
+.book-cover {
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    border: none;
+    background: transparent;
+    transform: none;
+    box-shadow: none;
+}
+
+.book-cover:hover {
+    transform: none;
+}
+.thai-heading {
+    font-family: 'Prompt', sans-serif !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+}
+
+/* พื้นหลังมีมิติ */
+body {
+    background:
+        radial-gradient(
+            circle at 15% 25%,
+            rgba(113, 87, 180, 0.16),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(63, 104, 170, 0.14),
+            transparent 35%
+        ),
+        #111827;
+}
+
+/* หัวข้อใหญ่ */
+.section-title {
+    text-shadow: 0 5px 25px rgba(225, 197, 142, 0.12);
+}
+
+/* กล่องข้อมูล */
+.info-box {
+    background: rgba(255, 255, 255, 0.035);
+    border: 1px solid rgba(225, 197, 142, 0.25);
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    transition: all 0.35s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-6px);
+    border-color: rgba(225, 197, 142, 0.7);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* รูปภาพมีลูกเล่น */
+#story img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#story img:hover {
+    transform: scale(1.025);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* เส้นตกแต่งใต้หัวข้อ */
+.section-label {
+    letter-spacing: 3px;
+}
+/* ===== MAGICAL 3D BOOK ===== */
+
+.magic-book {
+    position: relative;
+    display: inline-block;
+    width: 270px;
+    max-width: 75%;
+    perspective: 1200px;
+    transform-style: preserve-3d;
+    transform: rotateY(-12deg);
+    transition: transform 0.6s ease;
+    filter: drop-shadow(20px 25px 20px rgba(0,0,0,0.4));
+}
+
+.magic-book-cover {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 2px 6px 6px 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.magic-book-spine {
+    position: absolute;
+    top: 1%;
+    left: -13px;
+    width: 15px;
+    height: 98%;
+    background: linear-gradient(
+        to right,
+        #080d20,
+        #263558,
+        #111a32
+    );
+    transform: skewY(-4deg);
+    border-radius: 3px 0 0 3px;
+    box-shadow: inset -3px 0 5px rgba(0,0,0,0.5);
+}
+
+.magic-book:hover {
+    transform: rotateY(0deg) translateY(-10px);
+}
+/* ===== MAGICAL MIDNIGHT ATMOSPHERE ===== */
+
+/* ดวงดาวบนหน้าแรก */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background:
+        radial-gradient(
+            ellipse at 50% 65%,
+            rgba(118, 91, 189, 0.32),
+            transparent 65%
+        ),
+        linear-gradient(
+            135deg,
+            #101528,
+            #22294b 55%,
+            #12182c
+        );
+}
+
+/* ดาวระยิบระยับ */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(2px 2px at 10% 20%, #fff, transparent),
+        radial-gradient(2px 2px at 30% 65%, #fff, transparent),
+        radial-gradient(3px 3px at 70% 25%, #f6dca5, transparent),
+        radial-gradient(2px 2px at 85% 75%, #fff, transparent),
+        radial-gradient(2px 2px at 55% 85%, #fff, transparent),
+        radial-gradient(2px 2px at 45% 15%, #fff, transparent);
+
+    background-size: 320px 280px;
+    opacity: 0.55;
+
+    animation: twinkle 5s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.2; }
+    to { opacity: 0.8; }
+}
+
+/* แสงรอบหนังสือ */
+.magic-book {
+    filter:
+        drop-shadow(0 0 25px rgba(167, 137, 238, 0.28))
+        drop-shadow(18px 25px 18px rgba(0, 0, 0, 0.4));
+}
+
+/* กรอบภาพห้องสมุด */
+#story img {
+    border: 1px solid rgba(242, 207, 147, 0.35);
+    border-radius: 18px;
+    box-shadow:
+        0 0 30px rgba(139, 111, 203, 0.15),
+        0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* เพิ่มแสงให้หัวข้อ */
+.section-title {
+    text-shadow: 0 0 30px rgba(255, 221, 171, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-section::before {
+        animation: none;
+    }
+}
+
+/* ==========================================
+   THE MIDNIGHT LIBRARY
+   MAGICAL MIDNIGHT - FINAL DESIGN
+   ========================================== */
+
+/* 1. สีหลักและความลื่นไหล */
+:root {
+  --magic-gold: #f5d69b;
+  --magic-purple: #9d85e9;
+  --magic-blue: #11152e;
+  --magic-light: #fff3dc;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #11152e;
+  color: #f7f0e9;
+  overflow-x: hidden;
+}
+
+/* 2. พื้นหลังแต่ละ Section */
+.section-space {
+  position: relative;
+  overflow: hidden;
+  padding-top: 110px;
+  padding-bottom: 110px;
+  background:
+    radial-gradient(
+      ellipse at 15% 45%,
+      rgba(123, 100, 207, 0.16),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 85% 75%,
+      rgba(244, 201, 134, 0.06),
+      transparent 45%
+    ),
+    linear-gradient(
+      145deg,
+      #15192f 0%,
+      #25274b 55%,
+      #14172d 100%
+    );
+}
+
+.section-space:nth-of-type(even) {
+  background:
+    radial-gradient(
+      ellipse at 80% 30%,
+      rgba(140, 107, 221, 0.19),
+      transparent 55%
+    ),
+    linear-gradient(
+      145deg,
+      #1b1d3b,
+      #303052,
+      #171a32
+    );
+}
+
+.section-space > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* 3. หน้าแรก - ท้องฟ้า Magical Midnight */
+.hero-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 50% 85%,
+      rgba(133, 99, 223, 0.34),
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse at 80% 25%,
+      rgba(238, 191, 113, 0.08),
+      transparent 40%
+    ),
+    linear-gradient(
+      180deg,
+      #0c1024 0%,
+      #202448 65%,
+      #34345e 100%
+    ) !important;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    radial-gradient(2px 2px at 10% 15%, #fff, transparent),
+    radial-gradient(2px 2px at 25% 65%, #f5d69b, transparent),
+    radial-gradient(3px 3px at 65% 20%, #fff, transparent),
+    radial-gradient(2px 2px at 80% 70%, #fff, transparent),
+    radial-gradient(2px 2px at 45% 80%, #d6c4ff, transparent),
+    radial-gradient(2px 2px at 90% 30%, #f5d69b, transparent),
+    radial-gradient(2px 2px at 35% 35%, #fff, transparent);
+  background-size: 330px 290px;
+  animation: magicStars 7s ease-in-out infinite alternate;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(170, 133, 243, 0.18),
+    transparent 68%
+  );
+  filter: blur(25px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+@keyframes magicStars {
+  from {
+    opacity: 0.35;
+  }
+  to {
+    opacity: 0.95;
+  }
+}
+
+/* 4. หัวข้อใหญ่ */
+.hero-section h1 {
+  color: #fff0d5;
+  text-shadow:
+    0 0 25px rgba(249, 215, 163, 0.2),
+    0 0 65px rgba(155, 119, 232, 0.15);
+}
+
+.section-title {
+  color: #fff0d5;
+  text-shadow: 0 0 22px rgba(245, 214, 155, 0.1);
+}
+
+.section-label {
+  color: var(--magic-gold);
+  letter-spacing: 2px;
+}
+
+/* 5. หนังสือ 3 มิติ - ABOUT */
+.book-cover {
+  display: block;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 5px !important;
+  box-shadow:
+    -12px 10px 0 rgba(12, 15, 33, 0.55),
+    0 25px 55px rgba(0, 0, 0, 0.4),
+    0 0 45px rgba(153, 128, 231, 0.15) !important;
+  transform: perspective(1000px) rotateY(-9deg);
+  animation: floatingBook 5s ease-in-out infinite;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+  filter: drop-shadow(0 0 12px rgba(174, 143, 245, 0.18));
+}
+
+.book-cover:hover {
+  animation-play-state: paused;
+  transform:
+    perspective(1000px)
+    rotateY(7deg)
+    rotateX(3deg)
+    scale(1.06);
+  filter: drop-shadow(0 0 25px rgba(207, 174, 255, 0.4));
+}
+
+@keyframes floatingBook {
+  0%, 100% {
+    transform:
+      perspective(1000px)
+      rotateY(-9deg)
+      translateY(0);
+  }
+  50% {
+    transform:
+      perspective(1000px)
+      rotateY(-6deg)
+      translateY(-15px);
+  }
+}
+
+/* 6. กล่องข้อมูลหนังสือ */
+.info-box {
+  border: 1px solid rgba(245, 214, 155, 0.28);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(8px);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-6px);
+  border-color: rgba(245, 214, 155, 0.75);
+  box-shadow: 0 12px 35px rgba(181, 147, 247, 0.15);
+}
+
+/* 7. รูปภาพใน STORY */
+#story img {
+  border-radius: 18px;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(245, 214, 155, 0.09);
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+#story img:hover {
+  transform: scale(1.035);
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.4),
+    0 0 35px rgba(245, 214, 155, 0.22);
+}
+
+/* 8. Carousel - CHOICES */
+#choices .carousel {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(156, 128, 235, 0.12);
+}
+
+#choices .carousel-item {
+  position: relative;
+}
+
+#choices .carousel-item img {
+  filter: brightness(0.82);
+}
+
+#choices .carousel-caption {
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+}
+
+/* 9. REVIEW - การ์ดอ่านง่ายขึ้น */
+#review .card,
+#review [class*="review-card"] {
+  border: 1px solid rgba(245, 214, 155, 0.25);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.055);
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+#review .card:hover,
+#review [class*="review-card"]:hover {
+  transform: translateY(-10px);
+  border-color: rgba(245, 214, 155, 0.8);
+  box-shadow:
+    0 15px 45px rgba(0, 0, 0, 0.2),
+    0 0 25px rgba(180, 142, 247, 0.15);
+}
+
+#review .card p,
+#review .card .card-text,
+#review [class*="review-card"] p {
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+#review .card h3,
+#review .card h4,
+#review .card h5 {
+  color: var(--magic-gold);
+}
+
+/* 10. REFLECTION */
+#reflection {
+  text-align: center;
+}
+
+#reflection blockquote,
+#reflection .reflection-quote {
+  color: #ffe0a3;
+  text-shadow: 0 0 30px rgba(255, 211, 139, 0.18);
+}
+
+/* 11. Accordion */
+.accordion-item {
+  border-color: rgba(245, 214, 155, 0.2);
+  overflow: hidden;
+}
+
+.accordion-button {
+  transition: background 0.3s ease;
+}
+
+.accordion-button:hover {
+  background: rgba(245, 214, 155, 0.08);
+}
+
+/* 12. ปุ่ม */
+.btn-gold {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn-gold:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(245, 214, 155, 0.3);
+}
+
+/* 13. บทส่งท้าย */
+footer {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 50% 40%,
+      rgba(138, 105, 214, 0.2),
+      transparent 65%
+    ),
+    #101329;
+}
+
+footer h2,
+footer h3,
+footer .section-title {
+  color: #ffe5b7;
+  text-shadow: 0 0 30px rgba(245, 214, 155, 0.18);
+}
+
+/* 14. มือถือและแท็บเล็ต */
+@media (max-width: 991px) {
+  .section-space {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  .book-cover {
+    max-width: 270px;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: clamp(2.5rem, 11vw, 4rem);
+  }
+
+  .book-cover {
+    max-width: 230px;
+  }
+
+  #review .card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ลดการเคลื่อนไหวสำหรับผู้ใช้ที่ตั้งค่าไว้ */
+@media (prefers-reduced-motion: reduce) {
+  .book-cover,
+  .hero-section::before {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+
+/* ===== FINAL POLISH: clean carousel, readable typography, responsive ===== */
+:root { --gold: #f5d69b; --cream: #fff3dc; --muted: #e1ddec; }
+body { color: var(--cream); }
+p { color: #e1ddec; }
+.navbar { backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+.navbar .nav-link:focus-visible, .btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.hero-section { min-height: 100svh; }
+.hero-description { color: #f3eafa; }
+.magic-book { width: min(290px, 80%); max-width: 100%; transform-origin: center; }
+.magic-book-cover { border-radius: 3px 8px 8px 3px; box-shadow: 10px 18px 35px rgba(0,0,0,.28); }
+.magic-book::after { content: ""; position: absolute; top: 2%; right: -9px; height: 96%; width: 10px; border-radius: 0 4px 4px 0; background: linear-gradient(90deg,#d6cdb9,#fff8e7,#9e9ca9); transform: skewY(3deg); z-index: 0; }
+#choices .carousel { isolation: isolate; background: #14192f; }
+#choices .carousel-inner, #choices .carousel-item { height: 490px; }
+#choices .carousel-item { overflow: hidden; }
+#choices .carousel-item .carousel-image { display: block; width: 100%; height: 100%; object-fit: cover; filter: brightness(.52) saturate(.9); }
+#choices .carousel-item::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg,rgba(7,10,27,.05) 12%,rgba(9,12,30,.45) 55%,rgba(9,12,30,.83) 100%); pointer-events: none; }
+#choices .carousel-caption { position: absolute; z-index: 2; left: 14%; right: 14%; top: auto; bottom: 17%; padding: 0 15px; display: flex !important; flex-direction: column; justify-content: end; align-items: center; text-align: center; text-shadow: 0 3px 14px rgba(0,0,0,.65); }
+#choices .carousel-caption h3 { font-family: "Playfair Display",serif; font-size: clamp(1.5rem,4vw,3rem); line-height: 1.25; letter-spacing: .02em; color: #ffe7b8; margin: 0 0 14px; overflow-wrap: anywhere; }
+#choices .carousel-caption p { font-size: clamp(.9rem,1.5vw,1.12rem); line-height: 1.7; color: #fff; margin: 0; max-width: 650px; }
+#choices .carousel-control-prev, #choices .carousel-control-next { width: 9%; z-index: 3; }
+#choices .carousel-indicators { z-index: 3; margin-bottom: 1.3rem; }
+.review-card { height: 100%; }
+.accordion-button { line-height: 1.65; }
+@media (max-width: 767.98px) {
+  #choices .carousel-inner, #choices .carousel-item { height: 390px; }
+  #choices .carousel-caption { left: 9%; right: 9%; bottom: 20%; padding: 0 10px; }
+  #choices .carousel-caption h3 { font-size: clamp(1.4rem,6vw,2.2rem); }
+  #choices .carousel-control-prev, #choices .carousel-control-next { width: 10%; }
+  .section-space { padding-top: 70px; padding-bottom: 70px; }
+  .magic-book { margin-bottom: 20px; }
+}
+@media (max-width: 420px) {
+  #choices .carousel-inner, #choices .carousel-item { height: 350px; }
+  #choices .carousel-caption { bottom: 22%; }
+  #choices .carousel-caption h3 { font-size: 1.35rem; }
+  #choices .carousel-caption p { font-size: .85rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .magic-book, .book-cover, .hero-section::before { animation: none !important; }
+  .magic-book, .review-card, .info-box { transition: none !important; }
+}
