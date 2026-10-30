@@ -955,3 +955,243 @@ p { color: #e1ddec; }
   .magic-book, .book-cover, .hero-section::before { animation: none !important; }
   .magic-book, .review-card, .info-box { transition: none !important; }
 }
+
+
+/* =========================================
+   FINAL ASSIGNMENT - RESPONSIVE DESIGN
+   เพิ่มต่อท้าย CSS เดิม
+   ========================================= */
+
+/* ป้องกันเนื้อหาล้นออกนอกจอ */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* รองรับข้อความยาว */
+.section-title,
+.hero-title,
+.footer-title {
+    overflow-wrap: anywhere;
+}
+
+/* หนังสือ 3D ให้ปรับตามหน้าจอ */
+.magic-book {
+    width: min(290px, 80%);
+    max-width: 100%;
+}
+
+.magic-book-cover {
+    width: 100%;
+    height: auto;
+}
+
+/* Accordion รองรับข้อความยาว */
+.accordion-button {
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* =========================================
+   LARGE SCREEN: Desktop
+   ========================================= */
+@media (min-width: 992px) {
+
+    .section-space {
+        padding-top: 110px;
+        padding-bottom: 110px;
+    }
+
+    .hero-section {
+        min-height: 100vh;
+    }
+
+    .magic-book {
+        width: 290px;
+    }
+
+}
+
+/* =========================================
+   MEDIUM SCREEN: Tablet
+   ========================================= */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .section-space {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .hero-section {
+        min-height: 90vh;
+    }
+
+    .hero-title {
+        font-size: clamp(3.5rem, 8vw, 6rem);
+    }
+
+    .magic-book {
+        width: 260px;
+    }
+
+    .carousel-image {
+        height: 420px;
+    }
+
+    .review-card {
+        padding: 25px;
+    }
+
+}
+
+/* =========================================
+   SMALL SCREEN: Mobile
+   ========================================= */
+@media (max-width: 767.98px) {
+
+    .section-space {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .hero-section {
+        min-height: 85vh;
+        padding: 110px 15px 60px;
+    }
+
+    .hero-title {
+        font-size: clamp(2.3rem, 10vw, 4rem);
+        letter-spacing: 1px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.15rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.9rem, 7vw, 2.8rem);
+    }
+
+    .magic-book {
+        width: 230px;
+        margin-bottom: 20px;
+    }
+
+    .info-box {
+        padding: 14px;
+    }
+
+    .info-box h5 {
+        font-size: 0.9rem;
+        overflow-wrap: anywhere;
+    }
+
+    .carousel-inner,
+    .carousel-item {
+        height: 350px;
+    }
+
+    #choices .carousel-inner,
+    #choices .carousel-item {
+        height: 350px;
+    }
+
+    .carousel-image,
+    #choices .carousel-item .carousel-image {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-caption {
+        left: 12%;
+        right: 12%;
+        bottom: 14%;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.4rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+
+    .review-card {
+        padding: 25px;
+    }
+
+    .accordion-button {
+        padding: 18px;
+        font-size: 0.95rem;
+    }
+
+    .accordion-body {
+        padding: 20px;
+    }
+
+    .footer-title {
+        font-size: 1.8rem;
+    }
+
+    .navbar .nav-link {
+        margin-left: 0;
+    }
+}
+
+/* =========================================
+   EXTRA SMALL SCREEN
+   ========================================= */
+@media (max-width: 375px) {
+
+    .hero-title {
+        font-size: 2.1rem;
+    }
+
+    .navbar-brand {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+
+    .section-label {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .magic-book {
+        width: 200px;
+    }
+
+    .carousel-caption h3 {
+        font-size: 1.15rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ลด Animation สำหรับผู้ที่ตั้งค่าลดการเคลื่อนไหว */
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .magic-book,
+    .hero-section::before {
+        animation: none;
+    }
+
+}
